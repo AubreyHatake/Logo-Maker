@@ -31,3 +31,15 @@ const questions = [
         name: "shapes"
     }
 ]
+
+// the function to write the file (which needs to be a svg file) will be written here, fs will be used in this function 
+
+
+
+
+// the function to initialize the app will be here 
+function init() {
+    inquirer.prompt(questions);
+}
+
+init();
