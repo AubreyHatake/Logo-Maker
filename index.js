@@ -2,3 +2,32 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
+
+const questions = [
+    {
+       type: "input",
+       name: "Logo",
+       message: "What is the title of your logo?"
+    },
+    {
+        type: "input",
+        name: "backgroundColor",
+        message: "What color would you like the background?"
+    },
+    {
+        type: "input",
+        name: "fontColor",
+        message: "What color would you like the words?"
+    },
+    {
+        type: "list",
+        message: "Choose a shape",
+        choices: [
+            "Circle",
+            "Triangle",
+            "Square",
+            "None"
+        ],  
+        name: "shapes"
+    }
+]
