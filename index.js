@@ -3,7 +3,9 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 
-const questions = [
+
+inquirer
+.propmt = ([
     {
        type: "input",
        name: "Logo",
@@ -30,7 +32,7 @@ const questions = [
         ],  
         name: "shapes"
     }
-]
+]);
 
 // the function to write the file (which needs to be a svg file) will be written here, fs will be used in this function 
 
@@ -38,8 +40,8 @@ const questions = [
 
 
 // the function to initialize the app will be here 
-function init() {
-    inquirer.prompt(questions);
-}
+// function init() {
+//     inquirer.prompt(questions);
+// }
 
-init();
+// init();
