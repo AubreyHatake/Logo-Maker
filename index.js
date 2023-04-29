@@ -2,24 +2,40 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
+const generateLogo = require("./generateLogo");
+const shapes = require("./library/shapes");
 
 
-inquirer
-.propmt = ([
+const questions = [
     {
        type: "input",
        name: "Logo",
        message: "What is the title of your logo?"
     },
     {
-        type: "input",
-        name: "backgroundColor",
-        message: "What color would you like the background?"
+        type: "list",
+        message: "What color would you like the background?",
+        choices: [
+            "Purple",
+            "Black",
+            "Blue",
+            "Green",
+            "White"
+        ],
+        name: "backgroundColor"
     },
     {
-        type: "input",
-        name: "fontColor",
-        message: "What color would you like the words?"
+        type: "list",
+        message: "What color would you like the words?",
+        choices: [
+            "Blue",
+            "Yellow",
+            "Black",
+            "Green",
+            "Purple",
+            "White"
+        ],
+        name: "fontColor"
     },
     {
         type: "list",
@@ -32,16 +48,23 @@ inquirer
         ],  
         name: "shapes"
     }
-]);
+]
 
 // the function to write the file (which needs to be a svg file) will be written here, fs will be used in this function 
+// function writeToFile(fileName, data) {
+//     fs.writeFileSync(path.join(process.cwd(), fileName), data);
+//   }
 
-
-
-
+  
 // the function to initialize the app will be here 
-// function init() {
-//     inquirer.prompt(questions);
-// }
+function init() {
+    inquirer.prompt(questions).then((data) => {
+        // fs.writeFile("logo.svg", (data));
+        console.log("swag");
+    
+     
+    //   console.log('file successfully written')
+    });
+  };
 
-// init();
+init();
