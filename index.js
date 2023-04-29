@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
-const generateLogo = require("./generateLogo");
+// const generateLogo = require("./generateLogo");
 const shapes = require("./library/shapes");
 
 
@@ -60,7 +60,7 @@ const questions = [
 function init() {
     inquirer.prompt(questions).then((data) => {
         // fs.writeFile("logo.svg", (data));
-        console.log("swag");
+        console.log(data);
     
      
     //   console.log('file successfully written')
