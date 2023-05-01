@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 // const generateLogo = require("./generateLogo");
-const shapes = require("./library/shapes");
+ const shapes = require("./library/shapes.js");
 
 
 const questions = [
@@ -59,7 +59,7 @@ const questions = [
 // the function to initialize the app will be here 
 function init() {
     inquirer.prompt(questions).then((data) => {
-        // fs.writeFile("logo.svg", (data));
+        // fs.writeFile("logo.svg", generateShapes(data));
         console.log(data);
     
      
