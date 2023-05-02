@@ -1,9 +1,9 @@
 // This is where all the needed packages will be for this application 
 const inquirer = require("inquirer");
 const fs = require("fs");
-const path = require("path");
-// const generateLogo = require("./generateLogo");
- const shapes = require("./library/shapes.js");
+
+const { Triangle, Square, Circle } = require("./lib/shapes");
+
 
 
 const questions = [
