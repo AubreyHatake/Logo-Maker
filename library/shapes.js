@@ -1,26 +1,37 @@
-// class Circle {
-//     constructor(Logo, shapes) {
-//     this.Logo = Logo;
-//     this.shapes = shapes;
-
-//     }
-// };
-
-// const generateShapes = ({Logo, shapes, backgroundColor}) => 
-// `    <!DOCTYPE html>
-// <html lang="en">
-// <head>
-//     <meta charset="UTF-8">
-//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//     <title></title>
-// </head>
-// <body>
-// <${data.shapes} cx="25" cy="75" r="20" stroke= "${data.backgroundColor}" fill="transparent" stroke-width="5"/>
-    
-// </body>
-// </html>`
-
-
-
-// module.exports = shapes.js;
+// Shape class utilizes constructor to define what it means to be a shape
+class Shape {
+    constructor() {
+      this.color = "";
+    }
+    // Shape class takes in setColor function
+    setColor(colorVar) {
+      this.color = colorVar;
+    }
+  }
+  
+  // Triangle class inherits properties defined in Shape class
+  class Triangle extends Shape {
+    render() {
+      // Returns polygon with color input
+      return `<polygon points="150, 18 244, 182 56, 182" fill="${this.color}" />`;
+    }
+  }
+  
+  // Square class inherits properties defined in Shape class
+  class Square extends Shape {
+    render() {
+      // Returns polygon with color input
+      return `<rect x="73" y="40" width="160" height="160" fill="${this.color}" />`;
+    }
+  }
+  
+  // Circle class inherits properties defined in Shape class
+  class Circle extends Shape {
+    render() {
+      // Returns polygon with color input
+      return `<circle cx="150" cy="115" r="80" fill="${this.color}" />`;
+    }
+  }
+  
+  // Exports classes (Square, Triangle, Circle)
+  module.exports = { Triangle, Square, Circle };
