@@ -40,6 +40,7 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 ### Walkthrough video 
 The walkthrough video will go here 
 
+[walkthrough vid](Untitled_%20May%201,%202023%207_30%20PM.webm)
 
 ## SVG Logos created 
 these are screenshots of logos I was able to create in using this Logo maker!
