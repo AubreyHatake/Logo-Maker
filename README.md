@@ -39,3 +39,9 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 ### Walkthrough video 
 The walkthrough video will go here 
+
+
+## SVG Logos created 
+these are screenshots of logos I was able to create in using this Logo maker!
+![Aub logo](aubSVG.jpg)
+![Bob logo](BOBSVG.jpg)
