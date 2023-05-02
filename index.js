@@ -8,9 +8,10 @@ const path = require("path");
 
 const questions = [
     {
-       type: "input",
-       name: "Logo",
-       message: "What is the title of your logo?"
+        type: "input",
+        message:
+          "What text would you like you logo to display? (Enter up to three characters)",
+        name: "text",
     },
     {
         type: "list",
@@ -25,17 +26,10 @@ const questions = [
         name: "backgroundColor"
     },
     {
-        type: "list",
-        message: "What color would you like the words?",
-        choices: [
-            "Blue",
-            "Yellow",
-            "Black",
-            "Green",
-            "Purple",
-            "White"
-        ],
-        name: "fontColor"
+        type: "input",
+        message:
+          "Choose text color (Enter color keyword OR a hexadecimal number)",
+        name: "textColor",
     },
     {
         type: "list",
@@ -43,8 +37,7 @@ const questions = [
         choices: [
             "Circle",
             "Triangle",
-            "Square",
-            "None"
+            "Square"
         ],  
         name: "shapes"
     }
