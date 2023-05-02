@@ -43,19 +43,20 @@ const questions = [
     }
 ]
 
-// the function to write the file (which needs to be a svg file) will be written here, fs will be used in this function 
-// function writeToFile(fileName, data) {
-//     fs.writeFileSync(path.join(process.cwd(), fileName), data);
-//   }
 
   
 // the function to initialize the app will be here 
 function init() {
     inquirer.prompt(questions).then((data) => {
+        if (data.text.length > 3) {
+            console.log("Must enter a value of no more than 3 characters");
         // fs.writeFile("logo.svg", generateShapes(data));
         console.log(data);
+    } else {
+        // Calling write file function to generate SVG file
+        writeToFile("logo.svg", data);
     
-     
+        }
     //   console.log('file successfully written')
     });
   };
